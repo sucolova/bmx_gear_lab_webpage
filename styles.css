@@ -1,0 +1,502 @@
+/* global */
+/* text */
+html {
+    font-size: 17px;
+}
+
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 700;
+    font-size: 7rem;
+}
+
+h2 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+p,
+li {
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 1000;
+    font-size: 2rem;
+}
+
+/* box */
+#mission,
+/*Mission and product use the same flex container settings*/
+.product {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mission,
+#products,
+#team {
+    margin: 15rem 0;
+    /* margins collapse, so 15rem vertical spacing for the next segment*/
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 200px;
+}
+
+h1 {
+    height: 100%;
+    padding: 0 3rem 0 3rem;
+    background-color: whitesmoke;
+}
+
+
+header nav {
+    width: 50%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+
+#header_bg {
+    /*background container (contains the backgroundvideo)*/
+    height: 1000px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#bgvid {
+    /*backgroundvideo*/
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* main */
+/* mission */
+
+
+#mission .imagebox {
+    width: 60%;
+}
+
+#mission .textbox {
+    width: 36%;
+}
+
+
+
+.imagebox img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* products */
+
+.product {
+    margin-bottom: 10rem;
+}
+
+.imagebox,
+.textbox {
+    width: 48%;
+}
+
+#products_heading h2 {
+
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: inline-block;
+}
+
+#products_heading p {
+    margin: 0 0 8rem 3rem;
+    display: inline-block;
+}
+
+#products .textbox p {
+    margin: 0;
+}
+
+#products .imagebox {
+    position: relative;
+}
+
+#products .imagebox h3 {
+    position: absolute;
+    top: -20px;
+    left: 10%;
+}
+
+
+/* Team */
+
+#team h2 {
+    margin-bottom: 8rem;
+    margin-left: 1rem;
+}
+
+
+#figures {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#row1,
+#row2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+
+
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* footer */
+
+
+footer ul li h3,
+footer p {
+    background-color: black;
+    color: whitesmoke;
+    margin: 0.4rem 0.4rem 0.4rem 0;
+    display: inline-block;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+}
+
+/* media queries */
+
+
+@media only screen and (max-width:1700px) {
+
+    /* header */
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        padding: 0;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 2000px) {
+
+    /* mission */
+
+    #mission .imagebox {
+        width: 1300px;
+        margin: 0 1rem;
+    }
+
+    #mission {
+        justify-content: center;
+    }
+
+    #mission .textbox {
+        max-width: 900px;
+        margin: 0 1rem;
+    }
+
+    /* products */
+
+    #products_list {
+        display: flex;
+        max-width: 2500px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .product {
+        display: block;
+        width: 40%;
+    }
+
+    .product .imagebox,
+    .product .textbox {
+        width: 100%;
+    }
+
+    #products_heading {
+        display: inline-block;
+        position: relative;
+        /* Move the element to the right by 50% of the container's width */
+        left: 50%;
+        /* Calculates 50% of the element's width, and moves it by that */
+        /* amount across the X-axis to the left */
+        transform: translateX(-50%);
+    }
+
+    /* Team */
+
+    #figures {
+        justify-content: space-evenly;
+        width: 2000px;
+        margin: 0 auto;
+    }
+
+    #team h2 {
+        text-align: center;
+    }
+
+
+
+
+
+}
+
+@media only screen and (max-width: 1400px) {
+    /* header */
+
+    header nav {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    /* global */
+
+    p,
+    li {
+        font-size: 1.5rem;
+    }
+
+    /* products */
+    .product {
+        display: block;
+        border-bottom: 3px solid black;
+        padding-bottom: 3rem;
+    }
+
+    .product .imagebox {
+        width: 580px;
+        margin: 0 auto;
+    }
+
+    .product .textbox {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #products_heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8rem;
+    }
+
+    #products_heading h2,
+    #products_heading p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* mission */
+
+    #mission {
+        display: block;
+        position: relative;
+    }
+
+    #mission .textbox,
+    #mission .imagebox {
+        width: 100%;
+    }
+
+    #mission .textbox {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        align-items: center;
+    }
+
+    /* #mission .textbox h2 {
+        text-align: center;
+        width: max-content;
+        
+    } */
+
+    /* #mission .textbox h2::after {
+        content: "\a";
+        white-space: pre;
+    } */
+
+    #mission .textbox h2,
+    #mission .textbox p {
+        color: whitesmoke;
+        background-color: black;
+        text-align: center;
+        width: fit-content;
+        height: min-content;
+        /* display: inline; */
+    }
+
+    /* team */
+
+    /* #team h2 {
+        margin-bottom: 8rem;
+        margin-left: 1rem;
+    }
+
+
+    #figures {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #row1,
+    #row2 {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+
+
+
+    figure img {
+        width: 100%;
+        height: auto;
+    } */
+
+    #figures {
+        display: block;
+    }
+
+    #row1,
+    #row2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    figcaption {
+        text-align: center;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 750px) {
+    .product .imagebox {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 638px) {
+    /* header */
+
+    header {
+        top: 0px;
+        height: 1000px;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+    }
+
+    h1 {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        height: 100%;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        display: inline;
+        letter-spacing: -60px;
+        font-size: 5.5rem;
+        color: whitesmoke;
+        background-color: transparent;
+    }
+
+    header nav {
+        width: min-content;
+        height: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: min-content;
+        background-color: transparent;
+    }
+
+    header nav ul li {
+        background-color: whitesmoke;
+    }
+}
+
+
+
+@media only screen and (max-height: 1000px) and (orientation: portrait) {
+    #header_bg {
+        /*background container (contains the backgroundvideo)*/
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-height: 1000px) and (orientation: landscape) {
+    #header_bg {
+        /*background container (contains the backgroundvideo)*/
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+}
